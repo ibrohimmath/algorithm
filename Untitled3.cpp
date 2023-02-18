@@ -15,18 +15,27 @@ using ll = long long;
 ll mod = 1e9 + 7;
 
 int main(){ fast;
-int x; vector<pair<int, char>>a(26);
-rep(i, 0, 26)  
-	cin >> x,
-	a[i] = {x, 'a' + i};
-sort(all(a)); reverse(all(a));
-int mx = a[0].ff; string s[mx];
-int k = 0;
-rep(i, 0, 26){
-	rep(j, 0, (int)a[i].ff)
-		s[k] += a[i].ss,
-		k = (k + 1) % mx;
+int n, m, x; cin >> n >> m; bool used[10] = {0};
+if(n > 10){
+	cout << "NO";
+	return 0;
 }
-for(string x : s) cout << x;
+rep(i, 0, n){
+	int sum = 0;
+	rep(j, 0, m){
+		cin >> x;
+		sum += x;
+		if(used[x]){
+			cout << "NO";
+			return 0;
+		}
+	}
+	if(sum % m){
+		cout << "NO";
+		return 0;
+	}
+	else used[x] = 1;
+}
+cout << "YES";
 	return 0;
 }
