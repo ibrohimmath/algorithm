@@ -1,1 +1,1 @@
-Robocontest.uz saytidagi masalalar yechimi
+# Robocontest.uz saytidagi masalalar yechimi
