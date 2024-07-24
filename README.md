@@ -1,1 +1,1 @@
-# Robocontest.uz saytidagi masalalar yechimi
+# Algorithms and data structures
